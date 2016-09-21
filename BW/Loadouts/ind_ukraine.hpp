@@ -1,72 +1,71 @@
 /*
 * Description:
-* Loadout definition for Militia forces
-* Weapons: AK variants
-* Uniforms: Middle Eastern
-* No NVG, GPS, and Optics
+* Loadout definition for Ukrainian forces
+* Weapons: AK-47/74/PKM/RPG variants
+* Uniforms: MNP Ukrainian
+* Limited NVG, GPS, and Optics
 *
 * Author:
 * BWMF
 * modified by Legion Tactical
 */
 class ind_f {
- 
-  // Rifle
-  #define IND_RIFLE "rhs_weap_akm"
-  #define IND_RIFLE_MAG "rhs_30Rnd_762x39mm:8"
-  #define IND_RIFLE_SCOPE "nil"
-  #define IND_RIFLE_RAIL "nil"
-  // GL Rifle
-  #define IND_GLRIFLE "rhs_weap_akm_gp25"
-  #define IND_GLRIFLE_MAG "rhs_30Rnd_762x39mm:8"
-  #define IND_GLRIFLE_MAG_SMOKE "rhs_VG40OP_white:4","rhs_VG40OP_green:2","rhs_VG40OP_red:3"
-  #define IND_GLRIFLE_MAG_HE "rhs_VOG25:8"
+  //Rifle
+  #define IND_RIFLE "hlc_rifle_ak74"
+  #define IND_RIFLE_MAG "hlc_30Rnd_545x39_B_AK:8","hlc_30Rnd_545x39_t_ak:2"
+  #define IND_RIFLE_SCOPE "RH_barska_rds"
+  #define IND_RIFLE_RAIL "acc_flashlight"
+  //GL Rifle
+  #define IND_GLRIFLE "hlc_rifle_aks74_GL"
+  #define IND_GLRIFLE_MAG "hlc_30Rnd_545x39_B_AK:8","hlc_30Rnd_545x39_t_ak:2"
+  #define IND_GLRIFLE_MAG_SMOKE "hlc_GRD_White:4","hlc_GRD_green:2","hlc_GRD_Red:3"
+  #define IND_GLRIFLE_MAG_HE "hlc_VOG25_AK:14"
   #define IND_GLRIFLE_MAG_FLARE "UGL_FlareRed_F:2","UGL_FlareGreen_F:2"
-  #define IND_GLRIFLE_SCOPE "nil"
-  #define IND_GLRIFLE_RAIL "nil"
-  // Carbine
-  #define IND_CARBINE "rhs_weap_aks74u"
-  #define IND_CARBINE_MAG "rhs_30Rnd_545x39_AK:8","rhs_30Rnd_545x39_7N10_AK:2"
-  #define IND_CARBINE_SCOPE "nil"
-  #define IND_CARBINE_RAIL "nil"
+  #define IND_GLRIFLE_SCOPE "RH_barska_rds"
+  #define IND_GLRIFLE_RAIL "acc_flashlight"
+  //Carbine
+  #define IND_CARBINE "hlc_rifle_ak74"
+  #define IND_CARBINE_MAG "hlc_30Rnd_545x39_B_AK:8","hlc_30Rnd_545x39_t_ak:2"
+  #define IND_CARBINE_SCOPE "RH_barska_rds"
+  #define IND_CARBINE_RAIL "acc_flashlight"
   // AR
-  #define IND_AR "hlc_rifle_rpk"
-  #define IND_AR_MAG "hlc_75Rnd_762x39_m_rpk:5"
-  #define IND_AR_MAG2 "hlc_75Rnd_762x39_m_rpk:5"
-  #define IND_AR_SCOPE "nil"
-  #define IND_AR_RAIL "nil"
+  #define IND_AR "rhs_weap_pkm"
+  #define IND_AR_MAG "rhs_100Rnd_762x54mmR:2"
+  #define IND_AR_MAG2 "rhs_100Rnd_762x54mmR_green:2"
+  #define IND_AR_SCOPE "RH_barska_rds"
+  #define IND_AR_RAIL "acc_flashlight"
   // AT
   #define IND_AT "rhs_weap_rpg7"
-  #define IND_AT_MAG "rhs_rpg7_PG7VL_mag:2","rhs_rpg7_OG7V_mag:1"
+  #define IND_AT_MAG "rhs_rpg7_PG7VL_mag:3"
   // MMG
   #define IND_MMG "rhs_weap_pkm"
   #define IND_MMG_MAG "rhs_100Rnd_762x54mmR:5"
-  #define IND_MMG_SCOPE "nil"
-  #define IND_MMG_RAIL "nil"
+  #define IND_MMG_SCOPE "RH_barska_rds"
+  #define IND_MMG_RAIL "acc_flashlight"
   // MAT
   #define IND_MAT "rhs_weap_rpg7"
-  #define IND_MAT_MAG "rhs_rpg7_PG7VL_mag:2","rhs_rpg7_OG7V_mag:1"
+  #define IND_MAT_MAG "rhs_rpg7_PG7VR_mag:2","rhs_rpg7_PG7VL_mag:1"
   // SAM
   #define IND_SAM "rhs_weap_igla"
   #define IND_SAM_MAG "rhs_mag_9k38_rocket:2"
   // Sniper Rifle
   #define IND_SNIPER "rhs_weap_svdp"
   #define IND_SNIPER_MAG "rhs_10Rnd_762x54mmR_7N1:8"
-  #define IND_SNIPER_SCOPE "rhs_acc_pso1m2"
-  #define IND_SNIPER_RAIL "nil"
+  #define IND_SNIPER_SCOPE "rhsusf_acc_LEUPOLDMK4_2"
+  #define IND_SNIPER_RAIL "acc_flashlight"
   // Spotter Rifle
-  #define IND_SPOTTER "rhs_weap_akm"
-  #define IND_SPOTTER_MAG "rhs_30Rnd_762x39mm:8"
-  #define IND_SPOTTER_SCOPE "nil"
-  #define IND_SPOTTER_RAIL "nil"
+  #define IND_SPOTTER "rhs_weap_svdp"
+  #define IND_SPOTTER_MAG "rhs_10Rnd_762x54mmR_7N1:8"
+  #define IND_SPOTTER_SCOPE "RH_barska_rds"
+  #define IND_SPOTTER_RAIL "acc_flashlight"
   // SMG
-  #define IND_SMG "rhs_weap_pp2000"
-  #define IND_SMG_MAG "rhs_mag_9x19mm_7n21_44:6"
-  #define IND_SMG_SCOPE "nil"
-  #define IND_SMG_RAIL "nil"
+  #define IND_SMG "hlc_rifle_aks74u"
+  #define IND_SMG_MAG "hlc_30Rnd_545x39_B_AK:6"
+  #define IND_SMG_SCOPE "RH_barska_rds"
+  #define IND_SMG_RAIL "acc_flashlight"
   // Pistol
-  #define IND_PISTOL "rhs_weap_makarov_pm"
-  #define IND_PISTOL_MAG "9Rnd_45ACP_Mag:4"
+  #define IND_PISTOL "rhs_weap_makarov_pmm"
+  #define IND_PISTOL_MAG "rhs_mag_9x18_12_57N181S:4"
   // Radio
   #define IND_RADIO_RIFLEMAN "tf_anprc154"
   #define IND_RADIO_SHORTWAVE "tf_anprc148jem"
@@ -78,13 +77,9 @@ class ind_f {
   #define IND_CHEMLIGHT "Chemlight_yellow:2"
   #define IND_FRAG "rhs_mag_rgd5:2"
   // Backpacks
-  #define IND_PACK_LIGHT "nil"
-  #define IND_PACK_MEDIUM "rhs_sidor"
-  #define IND_PACK_HEAVY "TRYK_B_Alicepack"
-
-  // By default, INDFOR uses Greek faces.
-  // If you want something else, specify the list here.
-  faces[] = {};
+  #define IND_PACK_LIGHT "B_AssaultPack_rgr","B_AssaultPack_blk"
+  #define IND_PACK_MEDIUM "B_Kitbag_rgr"
+  #define IND_PACK_HEAVY "B_Carryall_oli"
 
   // Define the cargo for Vehicles
   class Car {
@@ -92,6 +87,7 @@ class ind_f {
       IND_RIFLE_MAG,
       IND_RIFLE_MAG,
       IND_CARBINE_MAG,
+      IND_AR_MAG,
       IND_AR_MAG,
       IND_GLRIFLE_MAG_HE,
       IND_AT_MAG
@@ -131,7 +127,8 @@ class ind_f {
     };
     TransportItems[] = {
       "ACE_fieldDressing:12",
-      "ACE_morphine:4"
+      "ACE_morphine:4",
+      "ItemGPS"
     };
   };
 
@@ -146,7 +143,6 @@ class ind_f {
   };
 
   /* RIFLEMAN BASE */
-
   class I_Soldier_F {
     /* Randomized gear
     One item from each of these lists will be chosen at
@@ -160,43 +156,26 @@ class ind_f {
 
     // Define the list of possible uniforms that units will wear
     uniform[] = {
-      "U_CAF_AG_ME_ROBES_01",
-      "U_CAF_AG_ME_ROBES_01a",
-      "U_CAF_AG_ME_ROBES_01b",
-      "U_CAF_AG_ME_ROBES_01c",
-      "U_CAF_AG_ME_ROBES_01d",
-      "U_CAF_AG_ME_ROBES_02",
-      "U_CAF_AG_ME_ROBES_02a",
-      "U_CAF_AG_ME_ROBES_02b",
-      "U_CAF_AG_ME_ROBES_02c",
-      "U_CAF_AG_ME_ROBES_03",
-      "U_CAF_AG_ME_ROBES_03a",
-      "U_CAF_AG_ME_ROBES_03b",
-      "U_CAF_AG_ME_ROBES_03c",
-      "U_CAF_AG_ME_ROBES_03d",
-      "U_CAF_AG_ME_ROBES_04",
-      "U_CAF_AG_ME_ROBES_04a",
-      "U_CAF_AG_ME_ROBES_04b",
-      "U_CAF_AG_ME_ROBES_04c",
-      "U_CAF_AG_ME_ROBES_04d",
+      "MNP_CombatUniform_Ukrainian"
     };
     // Define the list of possible vests that units will wear
     vest[] = {
-      "V_BandollierB_cbr",
-      "V_Chestrig_khk",
-      "V_TacChestrig_cbr_F"
+      "MNP_Vest_UKR_A",
+      "MNP_Vest_UKR_B"
     };
     // Define the list of possible headgear that units will wear
     headgear[] = {
-      "rds_worker_cap2",
-      "rds_worker_cap3",
-      "H_ShemagOpen_tan",
-      "rds_Villager_cap1"
+      "MNP_Helmet_PAGST_UKR"
     };
     // Define the list of possible facewear that units will wear
     facewear[] = {
       nil,
+      "rhs_balaclava",
       "G_Balaclava_oli",
+      "G_Shades_Black",
+      "G_Shades_Blue",
+      "G_Shades_Green",
+      "G_Shades_Red",
       "rhs_scarf",
       "G_Bandanna_oli",
       "G_Bandanna_blk",
@@ -204,8 +183,9 @@ class ind_f {
     };
     // Define the list of possible backpacks that units will wear
     backpack[] = {
-      IND_PACK_MEDIUM
+      IND_PACK_LIGHT
     };
+
     // Define the list of possible primary weapons that units
     // will be assigned
     weapons[] = {IND_RIFLE};
@@ -230,7 +210,7 @@ class ind_f {
     backpackItems[] = {
       "ACE_fieldDressing:3",
       "ACE_morphine",
-      "ACE_CableTie",
+      "ACE_IR_Strobe_item",
       "ACE_CableTie",
       "ACE_Flashlight_XL50"
     };
@@ -245,7 +225,7 @@ class ind_f {
     // List the items (along with the amount) that will be placed
     // wherever there is room in the unit's inventory
     items[] = {
-      "ACE_Banana" // In case of emergency.
+      
     };
     // List the gear items txhat should be automatically slotted
     // correctly for the unit (like Map, Watch, NVG, etc)
@@ -257,40 +237,19 @@ class ind_f {
     // List the attachments that will be automatically added
     // to the unit's equipped weapons
     attachments[] = {
-			IND_RIFLE_SCOPE,
 			IND_RIFLE_RAIL
 		};
     // Set the basic radio for the unit
-    radio = nil;
+    radio = IND_RADIO_RIFLEMAN;
   };
 
   /* END RIFLEMAN BASE */
 
   /* RIFLEMAN EXTENSIONS */
 
-  /*
-  The next set of units all copy their gear from the Rifleman Base,
-  as defined with the : in the class definition. For example,
-
-  class I_officer_F : I_Soldier_F
-
-  says that I_officer_F will have the same properties and data
-  as I_Soldier_F unless specifically set otherwise.
-
-  You can override a certain type of gear by setting it to something
-  new using =
-  For example:
-  backpack[] = {IND_RADIO_MANPACK};
-
-  Instead of replacing gear, you can also add to gear by using +=
-  For example, to add GPS in addition to the base Watch, Map,
-  and Compass:
-  linkedItems[] += {"ItemGPS"};
-  */
-
   // CO and DC
   // Define gear additions and overrides for Officer units
-  class I_Officer_F: I_Soldier_F {
+  class I_officer_F: I_Soldier_F {
     backpack[] = {IND_RADIO_MANPACK};
     weapons[] = {IND_GLRIFLE};
     magazines[] = {
@@ -303,17 +262,17 @@ class ind_f {
       IND_SMOKE_WHITE,
       IND_SMOKE_COLOR
     };
-    handguns[] = {IND_PISTOL}; /// randomized
-    backpackItems[] += {"ACE_key_indp"};
-    linkedItems[] += {
-      "ItemGPS",
-      "Binocular",
-      "rhsusf_ANPVS_15"
-    };
     attachments[] = {
 			IND_GLRIFLE_SCOPE,
 			IND_GLRIFLE_RAIL
 		};
+    handguns[] = {IND_PISTOL}; /// randomized
+    backpackItems[] += {"ACE_key_indp"};
+    linkedItems[] += {
+      "ItemGPS",
+      "ACE_Vector",
+      "rhsusf_ANPVS_15"
+    };
     items[] = {"ACE_MapTools"};
     radio = IND_RADIO_SHORTWAVE;
   };
@@ -443,7 +402,7 @@ class ind_f {
   class I_Soldier_A_F: I_Soldier_F {
     backpack[] = {IND_PACK_MEDIUM};
     backpackItems[] += {IND_MMG_MAG};
-    linkedItems[] += {"Binocular"};
+    linkedItems[] += {"ACE_Vector"};
   };
 
   // Medium AT
@@ -496,7 +455,7 @@ class ind_f {
   class I_Soldier_AAA_F: I_Soldier_F {
     backpack[] = {IND_PACK_HEAVY};
     backpackItems[] = {IND_SAM_MAG};
-    linkedItems[] += {"Binocular"};
+    linkedItems[] += {"ACE_Vector"};
   };
 
   // Mortar Gunner
@@ -519,7 +478,7 @@ class ind_f {
   // Define gear additions and overrides for Mortar Asst units
   class I_support_AMort_F: I_Soldier_F {
     backpack[] = {"B_Mortar_01_support_F"};
-    linkedItems[] += {"Binocular"};
+    linkedItems[] += {"ACE_Vector"};
     items[] += {
       "ACE_fieldDressing:3",
       "ACE_morphine"
@@ -533,15 +492,14 @@ class ind_f {
   // Define the base class for Spotter units
   class I_spotter_F {
     uniform[] = {
-      "U_I_CombatUniform",
-      "U_I_CombatUniform_shortsleeve"
+      "MNP_CombatUniform_Ukrainian"
     };
     vest[] = {
-      "V_PlateCarrierIA1_dgtl",
-      "V_PlateCarrierIA2_dgtl"
+      "MNP_Vest_UKR_A",
+      "MNP_Vest_UKR_B"
     };
     headgear[] = {
-      "H_HelmetIA"
+      "MNP_Helmet_PAGST_UKR"
     };
     facewear[] = {
       nil,
@@ -556,7 +514,8 @@ class ind_f {
       "G_Bandanna_shades"
     };
     backpack[] = {
-      IND_PACK_MEDIUM
+      "B_AssaultPack_rgr",
+      "B_AssaultPack_blk"
     };
 
     weapons[] = {IND_SPOTTER};
@@ -595,15 +554,14 @@ class ind_f {
   // Define the base class for Sniper units
   class I_sniper_F {
     uniform[] = {
-      "U_I_CombatUniform",
-      "U_I_CombatUniform_shortsleeve"
+      "MNP_CombatUniform_Ukrainian"
     };
     vest[] = {
-      "V_PlateCarrierIA1_dgtl",
-      "V_PlateCarrierIA2_dgtl"
+      "MNP_Vest_UKR_A",
+      "MNP_Vest_UKR_B"
     };
     headgear[] = {
-      "H_HelmetIA"
+      "MNP_Helmet_PAGST_UKR"
     };
     facewear[] = {
       nil,
@@ -618,7 +576,8 @@ class ind_f {
       "G_Bandanna_shades"
     };
     backpack[] = {
-      IND_PACK_LIGHT
+      "B_AssaultPack_rgr",
+      "B_AssaultPack_blk"
     };
 
     weapons[] = {IND_SNIPER};
@@ -646,7 +605,8 @@ class ind_f {
       "rhsusf_ANPVS_15"
     };
     attachments[] = {
-			IND_SNIPER_SCOPE
+			IND_SNIPER_SCOPE,
+			IND_SNIPER_RAIL
 		};
     radio = IND_RADIO_SHORTWAVE;
   };
@@ -656,12 +616,15 @@ class ind_f {
   // Heli Pilot
   // Define the base class for all Helicopter pilot and crew units
   class I_Helipilot_F {
-    uniform[] = {"U_BG_Guerrilla_6_1"};
+    uniform[] = {
+      "MNP_CombatUniform_Ukrainian"
+    };
     headgear[] = {"rhsusf_cvc_green_helmet"};
     vest[] = {};
     facewear[] = {};
     backpack[] = {
-      IND_PACK_LIGHT
+      "B_AssaultPack_rgr",
+      "B_AssaultPack_blk"
     };
 
     weapons[] = {IND_SMG};
@@ -705,15 +668,14 @@ class ind_f {
   // Define the base class for all vehicle crew and engineer units
   class I_crew_F {
     uniform[] = {
-      "U_I_CombatUniform",
-      "U_I_CombatUniform_shortsleeve"
+      "MNP_CombatUniform_Ukrainian"
     };
     headgear[] = {
-      "H_HelmetIA"
+      "MNP_Helmet_PAGST_UKR"
     };
     vest[] = {
-      "V_PlateCarrierIA1_dgtl",
-      "V_PlateCarrierIA2_dgtl"
+      "MNP_Vest_UKR_A",
+      "MNP_Vest_UKR_B"
     };
     facewear[] = {
       nil,
@@ -728,7 +690,8 @@ class ind_f {
       "G_Bandanna_shades"
     };
     backpack[] = {
-      IND_PACK_LIGHT
+      "B_AssaultPack_rgr",
+      "B_AssaultPack_blk"
     };
 
     weapons[] = {IND_SMG};

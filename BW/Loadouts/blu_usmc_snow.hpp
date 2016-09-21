@@ -78,8 +78,8 @@ class blu_f {
   #define WEST_CHEMLIGHT "Chemlight_green:2"
   #define WEST_FRAG "HandGrenade:2"
   // Backpacks
-  #define WEST_PACK_LIGHT "rhsusf_assault_eagleaiii_coy"
-  #define WEST_PACK_MEDIUM "B_Kitbag_khk"
+  #define WEST_PACK_LIGHT "MNP_B_WB_AP"
+  #define WEST_PACK_MEDIUM "MNP_B_WB_KB"
   #define WEST_PACK_HEAVY "B_Carryall_khk"
 
   // By default, BLUFOR uses White, Black, and Asian faces.
@@ -153,7 +153,7 @@ class blu_f {
 
     // Define the list of possible uniforms that units will wear
     uniform[] = {
-      "rhs_uniform_FROG01_d"
+      "MNP_CombatUniform_USMC_arctic"
     };
     // Define the list of possible vests that units will wear
     vest[] = {
@@ -164,10 +164,7 @@ class blu_f {
     };
     // Define the list of possible headgear that units will wear
     headgear[] = {
-      "rhsusf_mich_helmet_marpatd",
-      "rhsusf_mich_helmet_marpatd_alt",
-      "rhsusf_mich_helmet_marpatd_norotos",
-      "rhsusf_mich_helmet_marpatd_norotos_arc"
+      "MNP_Helmet_USMC_arctic"
     };
     // Define the list of possible facewear that units will wear
     facewear[] = {};
@@ -232,10 +229,10 @@ class blu_f {
   // CO and DC
   // Define gear additions and overrides for Officer units
   class B_officer_F: B_Soldier_F {
-    backpack[] = {WEST_RADIO_MANPACK};
     vest[] = {
       "rhsusf_spc_squadleader"
     };
+    backpack[] = {WEST_RADIO_MANPACK};
     weapons[] = {WEST_GLRIFLE};
     magazines[] = {
       WEST_GLRIFLE_MAG,
@@ -497,13 +494,13 @@ class blu_f {
   // Define the base class for Spotter units
   class B_spotter_F {
     uniform[] = {
-      "rhs_uniform_FROG01_d"
+      "MNP_CombatUniform_USMC_arctic"
     };
     vest[] = {
       "rhsusf_spc_marksman"
     };
     headgear[] = {
-      "rhs_Booniehat_marpatd"
+      "H_Watchcap_blk"
     };
     facewear[] = {};
     backpack[] = {
@@ -546,13 +543,13 @@ class blu_f {
   // Define the base class for Sniper units
   class B_sniper_F {
     uniform[] = {
-      "rhs_uniform_FROG01_d"
+      "MNP_CombatUniform_USMC_arctic"
     };
     vest[] = {
       "rhsusf_spc_marksman"
     };
     headgear[] = {
-      "rhs_Booniehat_marpatd"
+      "H_Watchcap_blk"
     };
     facewear[] = {};
     backpack[] = {
@@ -596,7 +593,7 @@ class blu_f {
   // Define the base class for all Helicopter pilot and crew units
   class B_Helipilot_F {
     uniform[] = {
-      "rhs_uniform_FROG01_d"
+      "MNP_CombatUniform_USMC_arctic"
     };
     headgear[] = {"H_PilotHelmetHeli_B"};
     vest[] = {
@@ -648,16 +645,13 @@ class blu_f {
   // Define the base class for all vehicle crew and engineer units
   class B_crew_F {
     uniform[] = {
-      "rhs_uniform_FROG01_d"
+      "MNP_CombatUniform_USMC_arctic"
     };
     vest[] = {
       "rhsusf_spc_crewman"
     };
     headgear[] = {
-      "rhsusf_mich_helmet_marpatd",
-      "rhsusf_mich_helmet_marpatd_alt",
-      "rhsusf_mich_helmet_marpatd_norotos",
-      "rhsusf_mich_helmet_marpatd_norotos_arc"
+      "MNP_Helmet_USMC_arctic"
     };
     facewear[] = {};
     backpack[] = {
@@ -708,9 +702,6 @@ class blu_f {
 			WEST_CARBINE_RAIL
 		};
     backpack[] = {WEST_PACK_MEDIUM};
-    vest[] = {
-      "rhsusf_spc_rifleman"
-    };
     backpackItems[] = {"Toolkit"};
   };
 
