@@ -1,6 +1,6 @@
 # Campus Martius #
 
-*Kunduz Province, Afghanistan*
+*Tanoa, South Pacific*
 
 An open training ground for Legion Tactical training nights.
 
