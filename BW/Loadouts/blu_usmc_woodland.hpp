@@ -78,7 +78,7 @@ class blu_f {
   #define WEST_CHEMLIGHT "Chemlight_green:2"
   #define WEST_FRAG "HandGrenade:2"
   // Backpacks
-  #define WEST_PACK_LIGHT "rhsusf_falconii"
+  #define WEST_PACK_LIGHT "UK3CB_BAF_B_Bergen_TAN_Rifleman_A"
   #define WEST_PACK_MEDIUM "B_Kitbag_rgr"
   #define WEST_PACK_HEAVY "B_Carryall_oli"
 
