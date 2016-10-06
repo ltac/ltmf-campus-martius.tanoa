@@ -8,14 +8,14 @@ class EditorData
 	toggles=77;
 	class ItemIDProvider
 	{
-		nextID=1357;
+		nextID=1359;
 	};
 	class Camera
 	{
-		pos[]={7078.0527,44.184978,7236.4517};
-		dir[]={-0.18537241,-0.47378713,0.86096239};
-		up[]={-0.099768892,0.88052177,0.46337941};
-		aside[]={0.9776414,-6.047776e-008,0.21049513};
+		pos[]={7091.0352,123.64894,7183.7017};
+		dir[]={-0.10117496,-0.67979419,0.72646111};
+		up[]={-0.093792424,0.73324609,0.673455};
+		aside[]={0.99048823,-5.0087692e-007,0.13794765};
 	};
 };
 binarizationWanted=0;
@@ -33,13 +33,14 @@ addons[]=
 	"ace_zeus",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Missions_F_Curator",
-	"ace_advanced_fatigue"
+	"ace_advanced_fatigue",
+	"A3_Data_F_Curator_Characters"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -123,6 +124,13 @@ class AddonsMetaData
 			name="ACE3 - Advanced Fatigue";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item12
+		{
+			className="A3_Data_F_Curator";
+			name="Arma 3 Zeus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
 		};
 	};
 };
@@ -257,7 +265,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=135;
+		items=136;
 		class Item0
 		{
 			dataType="Group";
@@ -10433,7 +10441,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=500;
+							value=250;
 						};
 					};
 				};
@@ -10604,7 +10612,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=1.2;
 						};
 					};
 				};
@@ -11564,7 +11572,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=3;
+							value=5;
 						};
 					};
 				};
@@ -11608,6 +11616,36 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item135
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6899.6445,8.2398911,7459.4063};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+					};
+					id=1358;
+					type="B_Soldier_unarmed_F";
+					atlOffset=5.4247999;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1357;
+			atlOffset=5.4247999;
 		};
 	};
 	class Connections
