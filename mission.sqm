@@ -8,14 +8,14 @@ class EditorData
 	toggles=77;
 	class ItemIDProvider
 	{
-		nextID=1359;
+		nextID=1360;
 	};
 	class Camera
 	{
-		pos[]={7091.0352,123.64894,7183.7017};
-		dir[]={-0.10117496,-0.67979419,0.72646111};
-		up[]={-0.093792424,0.73324609,0.673455};
-		aside[]={0.99048823,-5.0087692e-007,0.13794765};
+		pos[]={7083.1909,253.90631,7141.0078};
+		dir[]={-0.13652593,-0.85121542,0.50695193};
+		up[]={-0.22137266,0.52468914,0.82200617};
+		aside[]={0.96568638,-2.0483858e-006,0.26006839};
 	};
 };
 binarizationWanted=0;
@@ -33,8 +33,8 @@ addons[]=
 	"ace_zeus",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Missions_F_Curator",
-	"ace_advanced_fatigue",
-	"A3_Data_F_Curator_Characters"
+	"A3_Data_F_Curator_Characters",
+	"ace_advanced_fatigue"
 };
 class AddonsMetaData
 {
@@ -120,17 +120,17 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="ace_advanced_fatigue";
-			name="ACE3 - Advanced Fatigue";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item12
-		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
+		};
+		class Item12
+		{
+			className="ace_advanced_fatigue";
+			name="ACE3 - Advanced Fatigue";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -11510,12 +11510,42 @@ class Mission
 		};
 		class Item134
 		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6899.6445,8.2398911,7459.4063};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+					};
+					id=1358;
+					type="B_Soldier_unarmed_F";
+					atlOffset=5.4247999;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1357;
+			atlOffset=5.4247999;
+		};
+		class Item135
+		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7072.3218,2.6600001,7287.2598};
+				position[]={7072.499,2.6600001,7288.853};
 			};
-			id=1353;
+			id=1359;
 			type="ace_advanced_fatigue_moduleSettings";
 			class CustomAttributes
 			{
@@ -11572,7 +11602,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=5;
+							value=15;
 						};
 					};
 				};
@@ -11610,42 +11640,12 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=4;
+							value=6;
 						};
 					};
 				};
 				nAttributes=5;
 			};
-		};
-		class Item135
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6899.6445,8.2398911,7459.4063};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-					};
-					id=1358;
-					type="B_Soldier_unarmed_F";
-					atlOffset=5.4247999;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=1357;
-			atlOffset=5.4247999;
 		};
 	};
 	class Connections
