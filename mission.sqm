@@ -8,14 +8,14 @@ class EditorData
 	toggles=77;
 	class ItemIDProvider
 	{
-		nextID=1361;
+		nextID=1364;
 	};
 	class Camera
 	{
-		pos[]={7080.7959,129.85794,7137.8501};
-		dir[]={-0.055217426,-0.65502936,0.75372273};
-		up[]={-0.047871839,0.75545299,0.65345126};
-		aside[]={0.99742037,-1.3942627e-006,0.073073044};
+		pos[]={7057.4604,29.325191,7240.458};
+		dir[]={-0.16494974,-0.46736127,0.86866897};
+		up[]={-0.087231517,0.88394046,0.45938462};
+		aside[]={0.98253566,-9.0268441e-007,0.18657386};
 	};
 };
 binarizationWanted=0;
@@ -34,13 +34,14 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Missions_F_Curator",
 	"A3_Data_F_Curator_Characters",
-	"ace_advanced_fatigue"
+	"ace_advanced_fatigue",
+	"acex_headless"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -129,6 +130,13 @@ class AddonsMetaData
 		{
 			className="ace_advanced_fatigue";
 			name="ACE3 - Advanced Fatigue";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item13
+		{
+			className="acex_headless";
+			name="ACEX - Headless";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -265,7 +273,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=137;
+		items=138;
 		class Item0
 		{
 			dataType="Group";
@@ -10156,12 +10164,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7048,2.6599731,7288};
-				angles[]={6.2778587,0,0.0053265258};
+				position[]={7048,2.659672,7288};
+				angles[]={6.2778621,0,0.0053232545};
 			};
 			id=1341;
 			type="ACE_moduleAdvancedMedicalSettings";
-			atlOffset=0.0013010502;
+			atlOffset=0.00099992752;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11652,12 +11660,104 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7124.4839,2.6600001,7284.4648};
+				position[]={7072,2.6601563,7280};
 			};
 			name="HC";
 			isPlayable=1;
 			id=1360;
 			type="HeadlessClient_F";
+			atlOffset=0.00015616417;
+		};
+		class Item137
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7064,2.6601563,7280};
+			};
+			id=1361;
+			type="acex_headless_module";
+			atlOffset=0.00015616417;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_headless_module_delay";
+					expression="_this setVariable ['delay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_headless_module_log";
+					expression="_this setVariable ['log',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acex_headless_module_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acex_headless_module_endMission";
+					expression="_this setVariable ['endMission',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections
