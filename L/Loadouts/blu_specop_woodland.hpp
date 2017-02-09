@@ -297,7 +297,9 @@ class blu_f {
 			WEST_RIFLE_RAIL
 		};
 		// Set the basic radio for the unit
-		radio = WEST_RADIO_RIFLEMAN;
+		radios[] = {
+      		"rfl"
+    	};
 	};
 
 	/* END RIFLEMAN BASE */
@@ -316,7 +318,7 @@ class blu_f {
 	You can override a certain type of gear by setting it to something
 	new using =
 	For example:
-	backpack[] = {WEST_RADIO_MANPACK};
+	lr_radio = true
 
 	Instead of replacing gear, you can also add to gear by using +=
 	For example, to add GPS in addition to the base Watch, Map,
@@ -327,7 +329,6 @@ class blu_f {
 	// CO and DC
 	// Define gear additions and overrides for Officer units
 	class B_officer_F: B_Soldier_F {
-		backpack[] = {WEST_RADIO_MANPACK};
 		weapons[] = {WEST_GLRIFLE};
 		magazines[] = {
 			WEST_GLRIFLE_MAG,
@@ -339,7 +340,7 @@ class blu_f {
 			WEST_SMOKE_WHITE,
 			WEST_SMOKE_COLOR
 		};
-    attachments[] = {
+    	attachments[] = {
 			WEST_GLRIFLE_SCOPE,
 			WEST_GLRIFLE_RAIL
 		};
@@ -354,13 +355,15 @@ class blu_f {
 			"Laserbatteries",
 			"ALIVE_Tablet"
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"sr",
+      		"rfl"
+    	};
 	};
 
 	// SL
 	// Define gear additions and overrides for Squad Leader units
 	class B_Soldier_SL_F: B_Officer_F {
-		backpack[] = {WEST_RADIO_MANPACK};
 		linkedItems[] += {
 			"Laserdesignator_03"
 		};
@@ -369,7 +372,10 @@ class blu_f {
 			"Laserbatteries"
 		};
 		backpackItems[] += {"ACE_fieldDressing"};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"sr",
+      		"rfl"
+    	};
 	};
 	// UAV
 	// Define gear additions and overrides for UAV Operator units
@@ -378,7 +384,9 @@ class blu_f {
 		linkedItems[] += {
 			"B_uavterminal"
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"rfl"
+    	};
 	};
 
 	// FTL
@@ -554,7 +562,10 @@ class blu_f {
 	// Mortar Asst
 	// Define gear additions and overrides for Mortar Asst units
 	class B_support_AMort_F: B_Soldier_F {
-		backpack[] = {WEST_RADIO_MANPACK};
+		radios[] = {
+      		"sr",
+      		"rfl"
+    	};
 		launchers[] = {"UK3CB_BAF_L16_Tripod"};
 		linkedItems[] += {"ACE_Vector"};
 		items[] += {
@@ -616,11 +627,14 @@ class blu_f {
 			"ACE_Vector",
 			West_NVG
 		};
-    attachments[] = {
+    	attachments[] = {
 			WEST_SPOTTER_SCOPE,
 			WEST_SPOTTER_RAIL
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"sr",
+      		"rfl"
+    	};
 	};
 
 	/* SNIPER BASE */
@@ -678,7 +692,9 @@ class blu_f {
 			WEST_SNIPER_SCOPE,
 			WEST_SNIPER_RAIL
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"rfl"
+    	};
 	};
 
 	/* HELICOPTER CREW BASE */
@@ -722,11 +738,13 @@ class blu_f {
 			"itemGPS",
 			"NVGogglesB_blk_F"
 		};
-    attachments[] = {
+    	attachments[] = {
 			WEST_SMG_SCOPE,
 			WEST_SMG_RAIL
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"rfl"
+    	};
 	};
 
 	// Heli crew
@@ -780,11 +798,13 @@ class blu_f {
 			"itemGPS",
 			West_NVG
 		};
-    attachments[] = {
+    	attachments[] = {
 			WEST_SMG_SCOPE,
 			WEST_SMG_RAIL
 		};
-		radio = WEST_RADIO_SHORTWAVE;
+		radios[] = {
+      		"rfl"
+    	};
 	};
 
 	// Repair Specialist

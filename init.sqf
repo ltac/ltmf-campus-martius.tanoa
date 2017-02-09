@@ -35,6 +35,13 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 
 // ====================================================================================
 
+// F3 - Fireteam Member Markers
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] spawn f_fnc_SetLocalFTMemberMarkers;
+
+// ====================================================================================
+
 // F3 - F3 Folk ARPS Group Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -50,6 +57,21 @@ if(isServer) then {
 };
 
 // ====================================================================================
+
+// F3 - Assign Gear AI
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+// [] execVM "f\assignGear\f_assignGear_AI.sqf";
+
+// ====================================================================================
+
+// ====================================================================================
+
+// F3 - AI Skill Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+// f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
+[] execVM "f\setAISKill\f_setAISkill.sqf";
 
 // F3 - ORBAT Notes
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
@@ -84,9 +106,9 @@ f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear?
 // F3 - Radio Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-if (!isDedicated) then {
-	[] call f_fnc_tfr_configureSpectatorChat;
-};
+// if (!isDedicated) then {
+// 	[] call f_fnc_tfr_configureSpectatorChat;
+// };
 
 // ====================================================================================
 
@@ -98,5 +120,11 @@ if (!isDedicated) then {
 f_wound_extraFAK = 2;
 
 [] execVM "f\medical\medical_init.sqf";
+
+// ====================================================================================
+
+// Radio Initialization
+[] execVM "L\radios\radioInit.sqf";
+
 
 // ====================================================================================

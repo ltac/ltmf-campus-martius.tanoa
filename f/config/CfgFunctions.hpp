@@ -24,12 +24,16 @@ class F // Defines the "owner"
 		file = "f\assignGear";
 		class assignGearMan{};
 		class assignGearVehicle{};
-		class gearErrorLogger {};
 	};
 	class setGroupID
 	{
 		file = "f\setGroupID";
 		class setGroupID{};
+	};
+	class setAISkill
+	{
+		file = "f\setAISKill";
+		class setAISKill{};
 	};
 	class missionConditions
 	{
@@ -42,6 +46,13 @@ class F // Defines the "owner"
 		file = "f\groupMarkers";
 		class localGroupMarker{};
 		class localSpecialistMarker{};
+	};
+	class FTMemberMarkers
+	{
+		file = "f\FTMemberMarkers";
+		class SetLocalFTMemberMarkers{};
+		class GetMarkerColor{};
+		class LocalFTMarkerSync{};
 	};
 	class preMount
 	{

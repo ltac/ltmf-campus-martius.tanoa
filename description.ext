@@ -15,12 +15,16 @@ class Header
 // F3 - Loading Screen
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-onLoadName="Campus Martius";
-onLoadMission="[LTMF] Legion Tactical Training Grounds";
-author="Legion Tactical";
+onLoadName = "Campus Martius";
+onLoadMission = "Legion Tactical Traning Sandbox - Tanoa";
+author = "Imperator";
 loadScreen = "loadLogo.jpg";
 overviewPicture = "overviewLogo.jpg";
-overviewText="Legion Tactical Training Grounds";
+overviewText = "Legion Tacticals Training Mission - Three Factions are spawnable with Zeus control on Tanoa.";
+
+// Pabst - Spectator
+#include "pabst\gui_common.hpp"
+// #include "pabst\gui_spectator.hpp"
 
 // BWMF Gear
 // Credits:headswe, Pabst, Zerith
@@ -28,7 +32,27 @@ overviewText="Legion Tactical Training Grounds";
 
 // ============================================================================================
 
-#include "CfgEventHandlers.hpp"
+//Extended Event Handlers:
+class Extended_Init_EventHandlers {
+    class CAManBase {
+        class F_AssignGear { init = "_this call F_fnc_assignGearMan; _this call L_fnc_initUnit"; onRespawn = true;};
+    };
+	class Car {
+        class F_AssignVehicleGear { serverInit  = "[(_this select 0), 'Car'] call F_fnc_assignGearVehicle;"; };
+    };
+    class Tank {
+        class F_AssignVehicleGear { serverInit  = "[(_this select 0), 'Tank'] call F_fnc_assignGearVehicle;"; };
+    };
+    class Helicopter {
+        class F_AssignVehicleGear { serverInit  = "[(_this select 0), 'Helicopter'] call F_fnc_assignGearVehicle;"; };
+    };
+    class Plane {
+        class F_AssignVehicleGear { serverInit  = "[(_this select 0), 'Plane'] call F_fnc_assignGearVehicle;"; };
+    };
+    class Ship_F {
+        class F_AssignVehicleGear { serverInit  = "[(_this select 0), 'Ship_F'] call F_fnc_assignGearVehicle;"; };
+    };
+};
 
 // ============================================================================================
 
@@ -45,7 +69,6 @@ enableDebugConsole = 1;
 respawn = "INSTANT";
 respawnDelay = 30;
 respawnVehicleDelay = 60;
-respawnButton = 1;
 respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition"};
 
@@ -96,6 +119,15 @@ class cfgNotifications
 		duration = 3;
 		priority = 1;
 	};
+
+	// Notification for the F3 JIP Component
+	class JIP {
+		title= "REINFORCEMENTS";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
+		duration = 3;
+		priority = 5;
+	};
 };
 
 // ============================================================================================
@@ -137,20 +169,6 @@ class Params
 
 // ============================================================================================
 
-// F3 - Radio Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_radios
-    {
-            title = "Radio System";
-            values[] = {0,2};
-            texts[] = {"Off","TFR"};
-            default = 2;
-            code = "f_var_radios = %1";
-    };
-
-// ============================================================================================
-
 // F3 - Medical Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -159,7 +177,7 @@ class Params
             title = "Medical System";
             values[] = {0,1,2};
             texts[] = {"Arma 3 Default","ACE3 - Basic","ACE3 - Advanced"};
-            default = 1;
+            default = 2;
             code = "f_var_medical = %1";
     };
 
@@ -173,7 +191,7 @@ class Params
             title = "$STR_f_param_mission_timer";
             values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
             texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-            default = 0;
+            default = 1;
             code = "f_param_mission_timer = %1";
     };
 
@@ -214,6 +232,43 @@ class Params
  		isGlobal = 0;						// Execute this only on the server
  		code = "f_param_timeOfDay = %1";
 	};
+	// F3 - AI Skill Selector
+	// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+	
+		class f_param_AISkill_BLUFOR
+		{
+			title = "$STR_f_param_AISkill_BLUFOR";
+			values[] = {0,1,2,3};
+			texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+			default = 1;
+			code = "f_param_AISkill_BLUFOR = %1";
+		};
+
+
+
+		class f_param_AISkill_OPFOR
+		{
+			title = "$STR_f_param_AISkill_OPFOR";
+			values[] = {0,1,2,3};
+			texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+			default = 1;
+			code = "f_param_AISkill_OPFOR = %1";
+		};
+
+
+
+		class f_param_AISkill_INDP
+		{
+			title = "$STR_f_param_AISkill_INDP";
+			values[] = {0,1,2,3};
+			texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+			default = 1;
+			code = "f_param_AISkill_INDP = %1";
+		};
+
+
+	// ============================================================================================
 
 // ============================================================================================
 
@@ -221,6 +276,15 @@ class Params
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
+
+// ============================================================================================
+
+// Pabst - Respawn
+// class CfgRespawnTemplates {
+//     class PabstSpectator {
+//         onPlayerRespawn = "pabst\pabst_spectator.sqf";
+//     };
+// };
 
 // ============================================================================================
 
@@ -240,6 +304,7 @@ class Params
 class CfgFunctions
 {
 	#include "f\config\CfgFunctions.hpp"
+	#include "L\config\CfgFunctions.hpp"
 };
 
 
@@ -247,6 +312,6 @@ class CfgFunctions
 
 // F3 - Custom Insignia
 
-class CfgUnitInsignia {
-	#include "f\assignGear\insignia\define.hpp"
-};
+// class CfgUnitInsignia {
+// 	#include "f\assignGear\insignia\define.hpp"
+// };
